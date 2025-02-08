@@ -32,5 +32,23 @@ npm start
 ##📌 Open http://localhost:3000 in your browser to view the app.
 The page will automatically reload when you make changes, and any lint errors will be displayed in the console.
 
+#🔐 Enabling Third-Party Cookies for Safari & Incognito Mode
+Since the Pet-Dog-Finder app relies on cookies for authentication , you may encounter issues if third-party cookies are disabled in Safari or Incognito mode in Chrome. Here’s how you can enable third-party cookies to ensure seamless functionality:
+
+##📱 For Safari:
+Open Safari on your Mac or iOS device.
+Go to Settings (on Mac, click Safari in the top menu and select Preferences).
+Navigate to the Privacy tab.
+Uncheck the option that says Prevent Cross-Site Tracking (this allows third-party cookies to be sent).
+Reload the app in Safari for the changes to take effect.
+Note: This will allow third-party cookies for all websites, not just Pet-Dog-Finder. Be mindful of your privacy preferences after enabling this setting.
+
+##🕵️‍♂️ For Incognito Mode in Chrome:
+Open Google Chrome and click the three dots at the top-right corner of the browser.
+Go to Settings → Privacy and Security → Cookies and other site data.
+Scroll down and ensure that Allow all cookies is selected. Alternatively, you can also allow third-party cookies for specific sites.
+Restart Chrome or close and reopen your Incognito window.
+Note: Incognito mode often blocks third-party cookies by default for privacy reasons. Enabling this setting will ensure proper functionality for Pet-Dog-Finder.
+
 ##📌 Credits
 This project retrieves dog adoption data from the Fetch Rewards API. Special thanks to Fetch Rewards for providing access to their API. 🐶🎉

@@ -171,7 +171,7 @@ function VerticalFilter({
               ml="2px"
               fontSize="15px"
               sx={{ "&:hover": { color: "white" } }}
-            ></Typography>
+            >Log out</Typography>
           </Paper>
         </IconButton>
       </Tooltip>
