@@ -240,7 +240,7 @@ function DogSearch({ handleLogout }) {
 
 
   return (
-    <div className="main py-2 px-2">
+    <div className="main py-2 px-2 pb-4">
       <div className="container">
         {!showMatch && (
           <div>
@@ -267,8 +267,9 @@ function DogSearch({ handleLogout }) {
               />
 
               <div>
-                {!showMatch && (
+
                   <Box sx={enthusiasticBoxStyles}>
+                  {(!showMatch && !isFavoriteClicked) ? (
                     <Typography
                       variant="h7"
                       component="span"
@@ -277,8 +278,41 @@ function DogSearch({ handleLogout }) {
                       Heart your favorite dogs, and we’ll match you with one of
                       your chosen pups!
                     </Typography>
-                  </Box>
-                )}
+                ) : (
+                  <Typography
+                  variant="h7"
+                  component="span"
+                  sx={enthusiasticTypographyStyles}
+                >
+                🐕 The paw-fect match is just one click away! 🐾❤️  
+                </Typography>
+                )
+              }
+
+</Box>
+
+{(!showMatch && isFavoriteClicked) && (
+                  <div className="d-flex align-items-center justify-content-center m-2">
+                      <Button
+                        onClick={handleMatch}
+                        sx={{
+                          fontSize:'17px',
+                          transition: "transform 0.5s",
+                          color: "white",
+                          backgroundColor: "rgba(40, 69, 107, 0.62)",
+                          "&:hover": {
+                            backgroundColor: "rgba(62, 95, 96, 0.4)",
+                            transform: "scale(1.20)",
+                            boxShadow: 4,
+                            fontSize: "20px",
+                          },
+                        }}
+                      >
+                        Match
+                      </Button>
+                      </div>
+                    )}
+
 
                 <div className="row">
                   {dogs.map((dog) => (
@@ -352,24 +386,6 @@ function DogSearch({ handleLogout }) {
                       alignItems: "center",
                     }}
                   >
-                    {!showMatch && (
-                      <Button
-                        onClick={handleMatch}
-                        sx={{
-                          transition: "transform 0.5s",
-                          color: "white",
-                          backgroundColor: "rgba(88, 133, 65, 0.4)",
-                          "&:hover": {
-                            backgroundColor: "rgba(62, 95, 96, 0.4)",
-                            transform: "scale(1.20)",
-                            boxShadow: 4,
-                            fontSize: "15px",
-                          },
-                        }}
-                      >
-                        Match
-                      </Button>
-                    )}
                   </Box>
                 )}
               </div>

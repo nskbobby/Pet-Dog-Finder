@@ -3,7 +3,7 @@ import axios from "axios";
 //To Fetch Location details from extenal API ZIPPOTAM for Location details
 export async function fetchLocationDetailsByZipCode(zipCode) {
   try {
-    const response = await axios.get(`http://api.zippopotam.us/us/${zipCode}`);
+    const response = await axios.get(`https://api.zippopotam.us/us/${zipCode}`);
 
     // Access the first place in the array
     const place = response.data.places[0];
