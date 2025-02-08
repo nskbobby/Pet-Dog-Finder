@@ -1,0 +1,32 @@
+
+.container-main{
+    background-image: url('/public/images/earth_dog_paw.avif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: scroll;
+    min-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark transparent color */
+background-blend-mode: multiply;
+}
+
+
+input{
+    border: none;
+    border-bottom: solid;
+    background:none;
+    color: white;
+}
+
+input:focus{
+    outline: none;
+}
+
+input::placeholder{
+    color: white;
+    font-family: cursive;
+}
+
+.login-main{
+    color: #FFF8DC;
+}
+
