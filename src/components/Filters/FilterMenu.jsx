@@ -68,29 +68,45 @@ function FilterMenu({
       {/* Minimum Age */}
       <TextField
         label="Min Age"
-        type="number"
+        type="text"
         fullWidth
         sx={{ mb: 2 }}
         value={ageMin}
         onChange={(e) => {
+          if((e.target.value)!== ''){
           const val = parseInt(e.target.value);
-          if (val < 20) {
+          if (val < 380) {
             setAgeMin(val);
           }
+        }else{
+          setAgeMin('');
+        }
         }}
       />
       {/* Maximum Age */}
       <TextField
         label="Max Age"
-        type="number"
+        type="text"
         fullWidth
         sx={{ mb: 2 }}
         value={ageMax}
         onChange={(e) => {
+          if((e.target.value)!== ''){
           const val = parseInt(e.target.value);
-          if (val < 20) {
+          if (val < 380) {
+            if(ageMin){
+              if(val>ageMin){
+                setAgeMax(val)
+              }else{
+                setAgeMax(ageMin+1);
+              }
+            }else{
             setAgeMax(val);
           }
+          }
+        }else{
+          setAgeMax('');
+        }
         }}
       />
       {/* Sort by */}
