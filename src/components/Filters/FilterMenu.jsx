@@ -97,8 +97,6 @@ function FilterMenu({
             if(ageMin){
               if(val>ageMin){
                 setAgeMax(val)
-              }else{
-                setAgeMax(ageMin+1);
               }
             }else{
             setAgeMax(val);
