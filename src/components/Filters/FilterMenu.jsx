@@ -94,13 +94,7 @@ function FilterMenu({
           if((e.target.value)!== ''){
           const val = parseInt(e.target.value);
           if (val < 380) {
-            if(ageMin){
-              if(val>ageMin){
-                setAgeMax(val)
-              }
-            }else{
             setAgeMax(val);
-          }
           }
         }else{
           setAgeMax('');
